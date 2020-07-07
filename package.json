@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "start": "tsc fileParse.ts && node fileParse.js && rm *.js"
+    }
+}
