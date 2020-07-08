@@ -3,6 +3,7 @@
         "start": "tsc htmlParse.ts && node htmlParse.js && rm *.js"
     },
     "dependencies": {
-        "@types/jsdom": "^16.2.3"
+        "@types/jsdom": "^16.2.3",
+        "jsdom": "^16.2.2"
     }
 }
