@@ -1,22 +1,26 @@
 import * as fs from 'fs';
 import * as rd from 'readline'
+import { Fields } from './fileEnums'
 
-var reader = rd.createInterface(fs.createReadStream("./sample.mht"))
+const charsetExample: string = 'Content-Type: text/html; charset="utf-8"'
 
-var data: string[] = [];
-reader.on("line", (l: string) => {
-    // var tokens = l.split(' ');
-    // var nr= parseInt(tokens[0]);
-    // var from = tokens[1];
-    // var to = tokens[2]
-    // console.log(`nr: ${nr} from ${from} to ${to}`);
-    data.push(l);
+let location: string = "";
+let contentType: string = "";
+let contentTransferEncoding: string = "";
+
+const getContentType = (line: string): string => {
+    return ""
+} 
+const getContentTransferEncoding = (line: string): string => {
+    return ""
+} 
+const getContentLocation = (line: string): string => {
+    return ""
+} 
+
+const reader = rd.createInterface(fs.createReadStream("./sample.mht"))
+reader.on("line", (line: string) => {
+    console.log(line);
+    
 })
-console.log(`Will be empty data has not yet been read ${data.length}` );
 
-reader.on("close", ()=> {
-    console.log(`Data has been read ${data.length}` );
-    data.forEach(element => {
-        console.log(`${element}`)
-    });
-})

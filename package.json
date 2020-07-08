@@ -1,5 +1,8 @@
 {
     "scripts": {
-        "start": "tsc fileParse.ts && node fileParse.js && rm *.js"
+        "start": "tsc htmlParse.ts && node htmlParse.js && rm *.js"
+    },
+    "dependencies": {
+        "@types/jsdom": "^16.2.3"
     }
 }
