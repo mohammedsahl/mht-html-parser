@@ -4,7 +4,7 @@ import * as CFB from 'cfb';
 
 const { JSDOM } = jsdom;
 
-const cfb: CFB.CFB$Container = CFB.read("demo.mht", { type: "file" });
+const cfb: CFB.CFB$Container = CFB.read("test_files/demo.mht", { type: "file" });
 console.log(cfb.FullPaths);
 
 const firstHtmlIdx:number = cfb.FullPaths.findIndex((path: string) => /\.html?$/.test(path));
